@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="formulario">
+
+        <form action="" class="formulario" id="formulario">
+
+            <label for="">Tipo de documento</label>
+            <select name="tipoDocumento" id="tipoDocumento">
+                <option value="1">Cedula de ciudadania</option>
+                <option value="2">Tarjeta de identidad</option>
+                <option value="3">Cedula extranjera</option>
+                <option value="4">Otro</option>
+            </select>
+            <p class="mensajeError">Seleccione un tipo de documento</p>
+
+            <label for="">Numero de documento</label>
+            <input type="number" name="numDocumento" id="numDocumento">
+            <p class="mensajeError">El numero de documeto solo puede tener numero de minimo 7 y maximo 10 caracteres</p>
+
+            <label for="">Nombres</label>
+            <input type="text" name="Nombres" id="Nombres">
+            <p class="mensajeError">Solo puedes ingresar letras mayusculas y minusculas con maximo 30 caracteres</p>
+
+            <label for="">Apellidos</label>
+            <input type="text" name="Apellidos" id="Apellidos">
+            <p class="mensajeError">Solo puedes ingresar letras mayusculas y minusculas con maximo 30 caracteres</p>
+
+            <label for="">Fecha de nacimiento</label>
+            <input type="date" name="FechaNac" id="FechaNac">
+            <p class="mensajeError">Por favor llene el campo, es obligatorio</p>
+
+            <label for="">Correo electronico</label>
+            <input type="text" name="Correo" id="Correo">
+            <p class="mensajeError">El correo debe tener un formato valido ejemplo: juan123@gmail.com</p>
+
+            <label for="">Contraseña</label>
+            <input type="password" name="password" id="password">
+            <p class="mensajeError">la contraseña debe tener minimo 4 y maximo 15 caracteres</p>
+
+            <label for="">Comprobar contraseña</label>
+            <input type="password" name="password2" id="password2">
+            <p class="mensajeError">Porfavor verifique que las contraseñas coincidan</p>
+
+            <div class="terminos">
+                <label for="">Aceptar terminos y condiciones</label>
+                <input type="checkbox" name="Terminos" id="Terminos" class="terminos">
+                <p class="mensajeError">Debe aceptar los terminos y condiciones</p>
+            </div>    
+                <input type="button" name="Boton" id="Boton" value="enviar">
+        </form>
+
+    </section>
+</body>
+<script src="js/formulario.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</html>

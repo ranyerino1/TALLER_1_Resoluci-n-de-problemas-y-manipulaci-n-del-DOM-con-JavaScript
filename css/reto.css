@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}.retos{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+}.reto1{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px;
+    padding: 5px;
+}.reto2{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    border: solid 2px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}.reto2Color{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    border: solid 2px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}.reto3{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    display: flex;
+    border: solid 2px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.reto3 button{
+    width: 50%;
+}.reto3Color{
+    background-color: darkgoldenrod;
+    color: blue;
+}.reto3Color2{
+    background-color: aqua;
+    color: blueviolet;
+}#reto4{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    border: solid 2px;
+    padding: 5px;
+}.reto5{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    border: solid 2px;
+    padding: 5px;
+}.reto52{
+    margin-top: 20px;
+    width: 20%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    border: solid 2px;
+    padding: 5px;
+    background-color: darkmagenta;
+}

@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}body{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+section.formulario{
+    width: 20%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+form.formulario{
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+div.terminos{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+input.terminos{
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+}
+form input,select{
+    width: 100%;
+}p.mensajeExito{
+    display: none;
+}p.mensajeError{
+display: none;
+color: red;
+}p.mensajeErrorV{
+    display: block;
+}
