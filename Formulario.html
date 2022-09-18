@@ -1,64 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/formulario.css">
     <title>Document</title>
 </head>
+
 <body>
-    <section class="formulario">
+    <nav>
+        <a href="Formulario.html">formulario</a>
+        <a href="index.html">inicio</a>
+        <a href="retos.html">retos</a>
+        <div class="animation start-home"></div>
+    </nav>
+    <main>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: tipos documento -->
+			<div class="formulario__grupo" id="grupo__tipoDoc">
+				<label for="tipoDoc" class="formulario__label">Tipo de documento</label>
+				<div class="formulario__grupo-input">
+					<select name="tipoDoc" id="tipoDoc" class="formulario__input">
+						<option value="0">Tipo de documento</option>
+						<option value="1">Cecula de ciudadania</option>
+						<option value="2">Tarjeta de identidad</option>
+						<option value="3">Otro</option>
+					</select>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Debe seleccionar un tipo de docuemto</p>
+			</div>
 
-        <form action="" class="formulario" id="formulario">
+			<!-- Grupo: numero de documento -->
+			<div class="formulario__grupo" id="grupo__numDoc">
+				<label for="numDoc" class="formulario__label">Numero de documento</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="numDoc" id="numDoc">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El numero de docuumento solo puede contener numeros y el maximo son 10 dígitos</p>
+			</div>
 
-            <label for="">Tipo de documento</label>
-            <select name="tipoDocumento" id="tipoDocumento">
-                <option value="1">Cedula de ciudadania</option>
-                <option value="2">Tarjeta de identidad</option>
-                <option value="3">Cedula extranjera</option>
-                <option value="4">Otro</option>
-            </select>
-            <p class="mensajeError">Seleccione un tipo de documento</p>
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre puede contener mayusculas y minusculas pero no caracteres especiales ni numeros</p>
+			</div>
 
-            <label for="">Numero de documento</label>
-            <input type="number" name="numDocumento" id="numDocumento">
-            <p class="mensajeError">El numero de documeto solo puede tener numero de minimo 7 y maximo 10 caracteres</p>
+			<!-- Grupo: Apellido -->
+			<div class="formulario__grupo" id="grupo__apellido">
+				<label for="apellido" class="formulario__label">Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellido" id="apellido">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre puede contener mayusculas y minusculas pero no caracteres especiales ni numeros</p>
+			</div>
 
-            <label for="">Nombres</label>
-            <input type="text" name="Nombres" id="Nombres">
-            <p class="mensajeError">Solo puedes ingresar letras mayusculas y minusculas con maximo 30 caracteres</p>
+			<!-- Grupo: Fecha de nacimiento -->
+			<div class="formulario__grupo" id="grupo__nacimiento">
+				<label for="nacimiento" class="formulario__label">Fecha de nacimiento</label>
+				<div class="formulario__grupo-input">
+					<input type="date" class="formulario__input" name="nacimiento" id="nacimiento">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La fecha de nacimiento debe estar en formato dia/mes/año</p>
+			</div>
 
-            <label for="">Apellidos</label>
-            <input type="text" name="Apellidos" id="Apellidos">
-            <p class="mensajeError">Solo puedes ingresar letras mayusculas y minusculas con maximo 30 caracteres</p>
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
 
-            <label for="">Fecha de nacimiento</label>
-            <input type="date" name="FechaNac" id="FechaNac">
-            <p class="mensajeError">Por favor llene el campo, es obligatorio</p>
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
 
-            <label for="">Correo electronico</label>
-            <input type="text" name="Correo" id="Correo">
-            <p class="mensajeError">El correo debe tener un formato valido ejemplo: juan123@gmail.com</p>
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Comprobar Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
 
-            <label for="">Contraseña</label>
-            <input type="password" name="password" id="password">
-            <p class="mensajeError">la contraseña debe tener minimo 4 y maximo 15 caracteres</p>
 
-            <label for="">Comprobar contraseña</label>
-            <input type="password" name="password2" id="password2">
-            <p class="mensajeError">Porfavor verifique que las contraseñas coincidan</p>
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
 
-            <div class="terminos">
-                <label for="">Aceptar terminos y condiciones</label>
-                <input type="checkbox" name="Terminos" id="Terminos" class="terminos">
-                <p class="mensajeError">Debe aceptar los terminos y condiciones</p>
-            </div>    
-                <input type="button" name="Boton" id="Boton" value="enviar">
-        </form>
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
 
-    </section>
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
 </body>
 <script src="js/formulario.js"></script>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
 </html>

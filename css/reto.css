@@ -1,22 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}.retos{
-        display: flex;
-        width: 100%;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-}.reto1{
+}
+
+.retos {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.retos div {
+    height: 35vh;
+}
+
+.reto1 {
     margin-top: 20px;
     width: 20%;
-    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: solid 2px;
     padding: 5px;
-}.reto2{
+}
+
+.reto1 input {
+    width: 70%;
+}
+
+.reto2 {
     margin-top: 20px;
     width: 20%;
     height: 25vh;
@@ -24,7 +37,9 @@
     padding: 5px;
     display: flex;
     justify-content: center;
-}.reto2Color{
+}
+
+.reto2Color {
     margin-top: 20px;
     width: 20%;
     height: 25vh;
@@ -34,7 +49,9 @@
     color: white;
     display: flex;
     justify-content: center;
-}.reto3{
+}
+
+.reto3 {
     margin-top: 20px;
     width: 20%;
     height: 25vh;
@@ -44,15 +61,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}.reto3 button{
+}
+
+.reto3 button {
     width: 50%;
-}.reto3Color{
-    background-color: darkgoldenrod;
-    color: blue;
-}.reto3Color2{
+}
+
+.reto3Color2 {
     background-color: aqua;
     color: blueviolet;
-}#reto4{
+}
+
+#reto4 {
+    margin-top: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    border: solid 2px;
+    padding: 5px;
+}
+
+.reto5 {
     margin-top: 20px;
     width: 20%;
     height: 25vh;
@@ -60,15 +89,9 @@
     justify-content: center;
     border: solid 2px;
     padding: 5px;
-}.reto5{
-    margin-top: 20px;
-    width: 20%;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    border: solid 2px;
-    padding: 5px;
-}.reto52{
+}
+
+.reto52 {
     margin-top: 20px;
     width: 20%;
     height: 25vh;
@@ -77,4 +100,143 @@
     border: solid 2px;
     padding: 5px;
     background-color: darkmagenta;
+}
+
+button {
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    width: 50%;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background-color: #2c3e50;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+}
+
+button::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(#488cfb,
+            #29dbbc,
+            #ddf505,
+            #ff9f0e,
+            #e440bb,
+            #655adc,
+            #488cfb);
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+}
+
+button:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+button,
+button::after {
+    box-sizing: border-box;
+}
+
+button:active {
+    --border-width: 5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .retos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .reto1{
+        width: 60%;
+    }
+    .reto2{
+        width: 60%;
+    }
+    .reto3{
+        width: 60%;
+    }
+    #reto4{
+        width: 60%;
+    }
+    .reto5{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+    .retos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .reto1{
+        width: 350px;
+    }
+    .reto2{
+        width: 350px;
+    }
+    .reto2Color{
+        width: 350px;
+    }
+    .reto3{
+        width: 350px;
+    }
+    #reto4{
+        width: 350px;
+    }
+    .reto5{
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1120px) {
+
+    .retos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .reto1{
+        width: 350px;
+    }
+    .reto2{
+        width: 350px;
+    }
+    .reto2Color{
+        width: 350px;
+    }
+    .reto3{
+        width: 350px;
+    }
+    #reto4{
+        width: 350px;
+    }
+    .reto5{
+        width: 350px;
+    }
 }
